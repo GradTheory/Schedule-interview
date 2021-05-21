@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { getDay,getDate } from 'date-fns'
+import { getDate } from 'date-fns'
 import { enGB } from 'date-fns/locale'
 import { DatePickerCalendar } from 'react-nice-dates'
 import 'react-nice-dates/build/style.css'
