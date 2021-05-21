@@ -12,12 +12,12 @@ const Bottom = () => {
     const dateselected = useSelector(state => state.dateselected)
     const timeselected = useSelector(state => state.timeselected)
     const schedulebutton = useSelector(state => state.schedulebutton)
-    console.log("schedulebtn",schedulebutton);
+ 
     return (
         <>
              <div className="flex justify-between py-6 px-11 border-r border-l border-t border-b-2 rounded-md">
                                
-                                 <div id={leftbutton && ('disableBack')} onClick={()=>{
+                                 <div id={leftbutton ? ('disableBack'):undefined} onClick={()=>{
                                      dispatch(backtoDate())
                                  }} className=" cursor-pointer flex bg-blue-100 w-32 min-w-full justify-center  items-center rounded-md font-bold text-md  py-2.5 px-3 text-blue-500" type="submit">
                                      <img className='h-4/5' src={arrow } alt='arrow'/>

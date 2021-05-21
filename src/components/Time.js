@@ -10,7 +10,7 @@ const Time = ({value}) => {
   const dispatch = useDispatch()
   const [selected,setselected] = useState(false)
     return (
-        <div id={todisable && ('disable')} onClick={()=>{
+        <div id={todisable ? ('disable'):undefined} onClick={()=>{
           dispatch(addTime(value));
           if(selected){
             setselected(false)

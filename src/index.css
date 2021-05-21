@@ -29,6 +29,7 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
  #modal {
    font-family: 'inter'!important;
     position: absolute;
@@ -38,7 +39,8 @@
     transform: translate(-50%, -50%);
     min-width: 738px;
     max-width: 790px !important;
-    max-height: 550px;
+    height: 87%;
+    max-height: 500px;
     overflow: hidden;
   }
  
@@ -51,7 +53,9 @@
   }
   #time{
     width: 25%;
-    height: 315px;
+    min-height: 305px;
+    max-height: 315px;
+    /* height: 315px; */
     
   }
   #disable{
@@ -76,12 +80,27 @@
     color:  rgba(55, 65, 81,1) !important;
   }
   .nice-dates-grid_container{
+
     align-content: flex-start !important;
     min-height: 240px !important;
     max-height: 305px !important;
     transform: none !important;
-    
+    /* transition: none !important; */
+        will-change: auto !important;
   }
+  /* .nice-dates-grid_container .-moving .-transition{
+    opacity: 0 !important;
+    transition: opacity 1s !important;
+  } */
+.-moving{
+  opacity: 0 !important;
+  
+  
+}
+.-transition{
+  transition: none !important;
+  transition-property: none !important;
+}
   .nice-dates-week-header{
     box-shadow: none !important;
    
@@ -90,6 +109,9 @@
     font-weight: 500 !important;
     color: rgba(55, 65, 81,1) !important;
   }
+  
+    
+  
   .nice-dates-day:before, .nice-dates-day:after{
     border-radius: 5px !important;
     border: 2px solid rgba(59, 130, 246,1) !important;
@@ -99,7 +121,7 @@
   .nice-dates-day.-selected:before{
     opacity: 0;
   }
-
+  
   .nice-dates-grid{
     min-height: 294px !important;
   }
@@ -192,92 +214,8 @@
      display: none !important;
    }
   
-  /* .nice-dates-grid{
-    overflow: visible !important;
-    height: 200px;
-    max-height: 258px;
-  }
-  .nice-dates-grid_container{
-    height:240px !important;
-    transform: none !important;
-  }
-  .nice-dates-day.-selected:not(:hover) *, .nice-dates-day.-selected.-disabled *{
-    color: lightskyblue;
-  }
-  /* .nice-dates-day.-highlight { color: blue; } */
-  /* .nice-dates-day:after{
-    border: 2px solid rgb(80, 173, 231) !important;
-  } */ 
-  .MuiPaper-root{
-    background-color: #fff !important;
-    /* position:relative !important ; */
-    font-family: inter !important;
-  }
-  .MuiPopover-root{
-    z-index: 100 !important;
-    position: absolute !important;
-  }
-  .MuiPopover-paper{
-    /* position: relative; */
-    margin-left: 7% !important;
-    top: 18% !important;
-    margin-top: 15px !important;
-   
-  } 
-  .MuiTypography-body1{
-    font-family: 'inter' !important;
-  }
-  .MuiTypography-body2{
-    font-family: 'inter' !important;
-  }
-  .MuiTypography-caption{
-    font-family: 'inter' !important;
-  }
-  .MuiPaper-elevation8{
-    box-shadow: none !important;
-  }
-  .MuiPickersBasePicker-pickerView{
-    min-width: 380px !important;
-    max-width: 425px !important;
-  }
-  .MuiPickersBasePicker-container{
-    min-width: 380px !important;
-    max-width: 425px !important;
-  }
-  .MuiPickersCalendarHeader-switchHeader{
-    margin: 0px !important;
-  }
-  .MuiFormControl-root{
-    /* display: none !important; */
-  }
-
-  .MuiPickersCalendarHeader-daysHeader{
-    justify-content: space-evenly !important;
-  }
-  .MuiPickersCalendar-week{
-    justify-content: space-evenly !important
-  }
-  .MuiPickersDay-day{
-  color:rgba(0, 0, 0, 0.38) !important;
-}
-.MuiPickersCalendarHeader-dayLabel{
-  color:rgba(0, 0, 0, 0.87) !important;
   
-
-}
-.MuiPickersSlideTransition-transitionContainer > * {
   
-}
-.MuiPickersDay-daySelected{
-background-color:rgb(219, 234, 254) !important ;
-  color: rgb(59, 130, 246) !important;
-  outline: none !important;
-}
-  /* @media (min-width:1160px){
-    .MuiPopover-paper{
-      /* position: relative; */
-      /* margin-left: 5% !important; */
-     
      
   
 

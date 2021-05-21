@@ -13,7 +13,7 @@ function App() {
   if(showFinal){
   
       return(
-      <div id='modal' className='shadow-md w-9/12 h-3/4 font-body  grid grid-cols-9 grid-rows-6 '>
+      <div id='modal' className='shadow-md w-9/12  font-body  grid grid-cols-9 grid-rows-6 '>
 
     <div className='col-span-9 row-span-6'>
 
